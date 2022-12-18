@@ -1,0 +1,26 @@
+
+
+body{
+    background-color: $PrimaryColor;
+    font-family: $FontGeneral;
+    overflow-x: hidden;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.Container{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-left: 250px;
+    padding-bottom: 100px;
+}
+
+
+@media screen and (max-width: 700px){
+    .Container{
+        padding-left: 10px;
+    }
+}

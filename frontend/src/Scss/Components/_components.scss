@@ -1,0 +1,60 @@
+
+@import 'items';
+@import 'cards';
+@import 'buttons';
+@import 'modals';
+/*---------Loader-------------*/
+.Loader{
+    @include flex-center-column;
+    text-align: center;
+}
+.mesage-loader{
+  color: white;
+  font-size: 20px;
+}
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.aparecer{
+  animation: aparecer 1s;
+}
+
+@keyframes aparecer {
+  from {
+      opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.aparecerInvertido{
+  animation: aparecer 1s;
+}
+
+@keyframes aparecer {
+  from {
+      opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

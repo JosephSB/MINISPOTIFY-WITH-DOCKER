@@ -1,0 +1,62 @@
+.Usuario,.Usuario_Sections,.Usuario_ContentUser,
+.Usuario_SectionSongs,.Usuario_SectionPlaylist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Usuario{
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    min-height: 800px;
+    flex-direction: column;
+}
+.Usuario_ContentUser{
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 0;
+    justify-content: space-around;
+    border-bottom: 1px solid whitesmoke;
+    position: relative;
+}
+.Usuario_Sections{
+    padding: 10px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+.Usuario_SectionSongs,.Usuario_SectionPlaylist{
+    width: 100%;
+    max-width: 500px; 
+    flex-direction: column;
+}
+.Usuario_SectionSongs{
+    border-right: 1px solid whitesmoke;
+}
+
+
+.Usuario_BtnExit{
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.Usuario_Text{
+    color: white;
+    font-size: 40px;
+}
+.Usuario_Text2{
+    color: white;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 400px){
+    .Usuario_ContentUser{
+        flex-direction: column;
+    }
+    .Usuario_Text{
+        text-align: center;
+    }
+  }

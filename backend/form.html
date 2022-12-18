@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="http://localhost/Spotify/API/music/Upload" method="POST" enctype="multipart/form-data">
+        <input type="text" name="id_user">
+        <input type="text" name="songname">
+        <input type="text" name="gender">
+        <input type="file" name="file_song">
+        <input type="file" name="file_img">
+        <input type="date" name="date_premiere">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

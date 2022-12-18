@@ -1,0 +1,65 @@
+/*--------BOTON-----------*/
+.Btn1,.Btn2{
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.Btn1{
+    background-color: rgb(50, 205, 50);
+    border-bottom: 4px solid rgb(38, 163, 38);
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.Btn1:hover{
+    background-color: rgb(60, 219, 60); 
+    border-bottom: 2px solid rgb(49, 185, 49);
+}
+
+.BtnUpload{
+    display: block; 
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 150px;
+    background: rgb(38, 163, 38);;
+    color:#fff;
+    border:0px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.BtnUpload:hover{
+    color:#fff;
+    background: rgb(50, 205, 50);
+}
+.BtnUpload-InputFile{
+    color: white;  
+    margin: 5px;
+    display: none;
+}
+.Btn2:hover{
+    background: rgb(230, 230, 230);
+}
+
+.Btn-Play{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    @include flex-center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color:rgb(50, 205, 50) ;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.Btn-Play:hover{
+    background: rgb(51, 179, 51);
+}

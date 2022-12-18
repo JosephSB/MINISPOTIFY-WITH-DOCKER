@@ -1,0 +1,100 @@
+.Playlist{
+    //@include flex-center-column;
+    text-align: center;
+    padding-top: 20px;
+}
+.Playlist_Title,.Playlist_Text{
+    color: white;
+}
+.Playlist_Text{
+    font-size: 14px;
+}
+.Playlist_Form{
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+    @include flex-center;
+    flex-wrap: wrap;
+}
+.Playlist_UploadPortada{
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    background-color: rgb(10, 10, 10);
+    box-shadow: 1px 4px 30px 12px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 1px 4px 30px 12px rgba(0,0,0,0.52);
+    -moz-box-shadow: 1px 4px 30px 12px rgba(0,0,0,0.52);
+    cursor: pointer;
+    margin: 10px;
+}
+.Playlist_SpanPortada{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:  white;
+    @include flex-center-column;
+}
+.Playlist_TextFile{
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.Playlist_InputFile{
+    display: none;
+}
+.Playlist_Descriptions{
+    width: 100%;
+    max-width: 300px;
+}
+
+.Playlist_Input,.Playlist_TextArea{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+.Playlist_TextArea{
+    height: 80px;
+    resize: none;
+}
+
+.Playlist_Header,.Playlist_Body{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align:  center;
+}
+.Playlist_Header{
+    background-color: rgb(10, 10, 10);
+    @include flex-center;
+}
+.Playlist_BoxPortada{
+    position: relative;
+}
+.Playlist_PortadaHeader{
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 10px;
+    position: relative;
+}
+.Playlist_BodyHeader{
+    width: 100%;
+    max-width: 300px;
+    text-align: start;
+}
+
+@media screen and (max-width: 450px){
+    .Playlist_Header{
+        flex-direction: column;
+    }
+    .Playlist_PortadaHeader{
+        max-width: 100%;
+    }
+}
