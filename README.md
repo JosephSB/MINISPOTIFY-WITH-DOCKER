@@ -1,6 +1,16 @@
-# BACKEND: API MINI SPOTIFY
+# MINISPOTIFY
 
-## INSTALACION Y CONFIGURACION
+## HOW TO USE APP WITH DOCKER
+-   clone repository
+-   modify env in frontend and modify config in backend
+-   run command: docker-compose up -d --build
+-   join to container phpmyadmin (localhost:8080)
+-   import minispotify.sql
+-   open app (localhost:3000)
+
+## HOW TO USE APP WITHOUT DOCKER
+
+### INSTALACION Y CONFIGURACION
 
 - Crea un servidor local (yo use xammp)
 - Importa a mysql la bd _minispotiffy.sql_
