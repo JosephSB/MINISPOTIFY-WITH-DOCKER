@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  minispotiffy-backend:
+    image: minispotiffy-backend
+    container_name: minispotiffy-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/var/www/html/
+    ports:
+      - 8000:80
+    networks:
+      - minispotiffy-network
+
+  minispotiffy-frontend:
+    image: minispotiffy-frontend
+    container_name: minispotiffy-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    command: sh -c "npm start"
+    volumes:
+      - ./frontend:/usr/src/frontend
+      - /usr/src/frontend/node_modules
+    networks:
+      - minispotiffy-network
+
+  minispotiffy-db:
+    container_name: minispotiffy-db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: MYSQL_DATABASE
+      MYSQL_USER: MYSQL_USER
+      MYSQL_PASSWORD: MYSQL_PASSWORD
+    ports:
+      - "9906:3306"
+    networks:
+      - minispotiffy-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8080:80'
+    restart: always
+    environment:
+      PMA_HOST: minispotiffy-db
+    networks:
+      - minispotiffy-network
+
+networks:
+  minispotiffy-network:
+    driver: bridge

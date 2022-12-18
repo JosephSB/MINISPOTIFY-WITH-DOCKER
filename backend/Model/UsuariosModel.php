@@ -81,7 +81,7 @@
         {
             try {
                 $query = $this->db->connect()->prepare(
-                    'UPDATE TOKEN SET TOKEN=:token WHERE ID_USER=:idUser'
+                    'UPDATE token SET TOKEN=:token WHERE ID_USER=:idUser'
                 );
                 $query->execute([
                     'idUser'=>$idUser,
@@ -100,7 +100,7 @@
         {
             try {
                 $query = $this->db->connect()->prepare(
-                    'INSERT INTO TOKEN values (:idUser,:token,CURRENT_TIME())'
+                    'INSERT INTO token values (:idUser,:token,CURRENT_TIME())'
                 );
                 $query->execute([
                     'idUser'=>$idUser,
@@ -119,7 +119,7 @@
         {
             try {
                 $query = $this->db->connect()->prepare(
-                    'SELECT u.ID_USER,u.USERNAME,t.TOKEN,u.NAME,u.LASTNAME,u.EMAIL FROM TOKEN t 
+                    'SELECT u.ID_USER,u.USERNAME,t.TOKEN,u.NAME,u.LASTNAME,u.EMAIL FROM token t 
                     INNER JOIN usuarios u on(t.ID_USER = u.ID_USER) WHERE TOKEN = :token'
                 );
                 $query->execute(['token' => $token]);

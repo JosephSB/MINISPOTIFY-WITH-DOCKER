@@ -1,6 +1,8 @@
 
 minispotify.sql
 DER.PNG
+backend/Uploads/Img/*
+backend/Uploads/Musics/*
 # dependencies
 frontend/node_modules
 frontend/.pnp

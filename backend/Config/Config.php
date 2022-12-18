@@ -1,11 +1,11 @@
 <?php
 
-    define('URL', 'http://localhost/Spotify/');
+    define('URL', 'http://localhost:8000/');
     //-------------DB--------------
-    define('HOST', 'localhost');
-    define('DB', 'minispotify');
-    define('USER', 'root');
-    define('PASSWORD', "");
+    define('HOST', 'minispotiffy-db');
+    define('DB', 'MYSQL_DATABASE');
+    define('USER', 'MYSQL_USER');
+    define('PASSWORD', "MYSQL_PASSWORD");
     define('CHARSET', 'utf8mb4');
 
 ?>
